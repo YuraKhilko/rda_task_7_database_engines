@@ -20,9 +20,7 @@ CREATE TABLE ProductDescription (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     Description VARCHAR(100) NOT NULL,
     ProductID INT NOT NULL,
-    CountryID INT NOT NULL,
-    FOREIGN KEY (ProductID) REFERENCES Products(ID),
-    FOREIGN KEY (CountryID) REFERENCES GeoIPCache(CountryID)
+    CountryID INT NOT NULL
 ) ENGINE=MyISAM;
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
